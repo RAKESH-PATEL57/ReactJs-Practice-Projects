@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container
 {
   height: 100vh;
@@ -7,8 +13,65 @@
   align-items: center;
 }
 
-.task-input-conatiner
+.container .contents
+{
+  /*border: 2px solid red;
+  */height: 30rem;
+  width: 30rem;
+  box-shadow: inset 0rem 0rem .2rem gray;
+  padding: 1rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contents .heading
+{
+  font-size: 3rem;
+  filter: drop-shadow(0rem 0rem .5rem aqua);
+  -webkit-filter: drop-shadow(0rem 0rem .5rem aqua);
+}
+
+.contents .task-input-conatiner
 {
   display: flex;
   gap: .5rem;
+  /* border: 2px solid red; */
+  width: 100%;
+  justify-content: space-between;
+}
+
+.task-input-conatiner input
+{
+  width: 90%;
+}
+
+.todos-list
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+}
+
+.todos-list li
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgb(39, 39, 39);
+  margin-left: 0;
+  padding: .5rem .8rem;
+  box-shadow: inset 0rem 0rem .5rem gray;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
