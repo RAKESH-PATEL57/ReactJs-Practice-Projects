@@ -11,7 +11,7 @@ function App() {
     setTodos((todos) => {
       return todos.concat({
         text: input,
-        id: Math.floor(Math.random() * 10),
+        id: Math.random(),
       });
     });
 

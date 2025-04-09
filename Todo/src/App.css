@@ -6,7 +6,7 @@
 
 .container
 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -15,8 +15,8 @@
 
 .container .contents
 {
-  /*border: 2px solid red;
-  */height: 30rem;
+ 
+  min-height: 30rem;
   width: 30rem;
   box-shadow: inset 0rem 0rem .2rem gray;
   padding: 1rem;
