@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function TodoList({setTodos,todos,input}) {
+function TodoList({setTodos,todos}) {
     
   
 

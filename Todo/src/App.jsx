@@ -5,7 +5,6 @@ import TodoList from "./components/todoList";
 function App() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
-  const [inputHasText, setInputHasText] = useState(true);
 
   const handleSubmit = () => {
 
@@ -16,22 +15,9 @@ function App() {
       });
     });
 
-    setInputHasText(true);
     setInput("");
   };
 
-   const handleChange = (e) => {
-    let value = e.target.value;
-    if(value != "")
-    {
-      setInputHasText(false);
-    }
-    else
-    {
-      setInputHasText(true);
-    }
-    setInput(value);
-   }
 
   return (
     <>
@@ -42,14 +28,14 @@ function App() {
           <div className="task-input-conatiner">
             <input
               type="text"
-              onChange={handleChange}
+              onChange={(e) => setInput(e.target.value)}
               value={input}
             />
-            <button disabled={inputHasText} onClick={handleSubmit}>Add</button>
+            <button disabled={input != "" ? false : true} onClick={handleSubmit}>Add</button>
           </div>
 
           <ul className="todos-list">
-            <TodoList input={input} setTodos={setTodos} todos={todos} />
+            <TodoList setTodos={setTodos} todos={todos} />
           </ul>
         </div>
       </div>
